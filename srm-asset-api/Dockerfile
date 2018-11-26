@@ -3,7 +3,7 @@ WORKDIR /app
 COPY ./ ./
 RUN ./gradlew clean build test
 
-FROM openjdk:8-alpine
+FROM openjdk:8
 WORKDIR /app
 COPY --from=jdk /app/build/libs .
-CMD ulimit -c unlimited && java -jar srm-asset-api.jar
+CMD java -jar srm-asset-api.jar

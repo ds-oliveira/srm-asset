@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    image: danilooliveira28/srm-asset-api:latest
+    ports:
+    - "8080:8080"
+  front:
+    image: danilooliveira28/srm-asset-front-end:latest
+    ports:
+    - "4200:80"
