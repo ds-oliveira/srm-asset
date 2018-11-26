@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.srm.asset.domain.service.CustomerServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-11-25T21:32:31" hostname="MacBook-Pro-de-Danilo.local" time="0.027">
+  <properties/>
+  <testcase name="shouldInsertNewConsumer" classname="com.srm.asset.domain.service.CustomerServiceTest" time="0.024"/>
+  <testcase name="shouldNotReturnConsumers" classname="com.srm.asset.domain.service.CustomerServiceTest" time="0.001"/>
+  <testcase name="shouldNotInsertNewConsumer" classname="com.srm.asset.domain.service.CustomerServiceTest" time="0.0"/>
+  <testcase name="shouldReturnConsumers" classname="com.srm.asset.domain.service.CustomerServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,61 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<section>
+  <div style="text-align:center">
+    <div class="form">
+      <p class="form_title">Register a new customer</p>
+      <div class="form_label_div">
+        <label for="txtFullName">Full Name:</label>
+      </div>
+      <div class="form_input_div">
+        <input type="text" id="txtFullName" [(ngModel)]="customer.fullName" />
+      </div>
+      <div class="form_label_div">
+        <label for="txtCreditLimit">Credit Limit:</label>
+      </div>
+      <div class="form_input_div">
+        <input type="number" id="txtCreditLimit" [(ngModel)]="customer.creditLimit" />
+      </div>
+      <div class="form_label_div">
+        <label for="selectRisk">Risk:</label>
+      </div>
+      <div class="form_input_div">
+        <select id="selectRisk" [(ngModel)]="customer.risk">
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+      </div>
+      <div *ngIf="errorMessages">
+        <div class="form_label_div"></div>
+        <div class="form_input_div">
+          <ul>
+            <li *ngFor="let message of errorMessages" class="form_error_li">
+              {{ message }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button id="btnRegister" class="btn-success" (click)="send()">Confirm</button>
+      <br>
+      <div *ngIf="rawCustomersList.length > 0">
+        <p class="form_title">Registered customers</p>
+        <div class="table">
+          <div class="table_row table_header">
+            <div class="table_column table_name_column">Name</div>
+            <div class="table_column table_limit_column">Limit</div>
+            <div class="table_column table_risk_column">Risk</div>
+            <div class="table_column table_tax_column">Tax</div>
+          </div>
+          <div class="table_row" *ngFor="let customer of rawCustomersList">
+            <div class="table_column table_name_column">{{ customer.fullName }}</div>
+            <div class="table_column table_limit_column">{{ customer.creditLimit }}</div>
+            <div class="table_column table_risk_column">{{ customer.risk }}</div>
+            <div class="table_column table_tax_column">{{ customer.tax }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>
